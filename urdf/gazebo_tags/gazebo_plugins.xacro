@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+
+<!--AS WE HAVE FOUR WHEELED ROBOT, WE WILL DEFINE TWO LEFT JOINTS AND TWO RIGHT JOINTS-->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <gazebo>
+        <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+            <left_joint>RearLeftWheel</left_joint>
+            <left_joint>FrontLeftWheel</left_joint>
+            <right_joint>RearRightWheel</right_joint>
+            <right_joint>FrontRightWheel</right_joint>
+            <wheel_separation>0.15</wheel_separation>
+            <wheel_radius>0.068</wheel_radius>
+            <!--Best to use prefixes for frame ID's ('robotname/odom' for example) and to set the prefix on the RVIZ config too-->
+            <frame_id>carpet_rover/odom</frame_id>
+            <child_frame_id>carpet_rover/base_footprint</child_frame_id>
+        </plugin>
+    </gazebo>
+
+    <gazebo>
+        <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+            <joint_name>RearLeftWheel</joint_name>
+            <joint_name>FrontLeftWheel</joint_name>
+            <joint_name>RearRightWheel</joint_name>
+            <joint_name>FrontRightWheel</joint_name>
+        </plugin>
+    </gazebo>
+    
+</robot>

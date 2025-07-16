@@ -1,0 +1,408 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id - 37ed7333b50d007c975d9fec -->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Link for the world (standard practice for Gazebo only if you have a robot which is FIXED to the ground) -->
+  <!--<link name="world"/>
+  <joint name="world_to_assembly_fixedpartstochassis" type="fixed">
+    <parent link="world"/>
+    <child link="assembly_fixedpartstochassis"/> 
+    <origin xyz="0 0 0" rpy="0 0 0"/> 
+  </joint>-->
+
+  <!-- Use this instead when doing mobile robots!-->
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+      <parent link="base_footprint" />
+      <child link="chassis_link" />
+      <origin xyz="0 0 0.0275" rpy="0 0 0" />
+  </joint>
+  
+
+  <!-- Link chassis_link -->
+  <link name="chassis_link">
+    <inertial>
+      <origin xyz="-0.00393243 0.000523012 0.0166997" rpy="0 0 0"/>
+      <mass value="0.519517"/>
+      <inertia ixx="0.00106248" ixy="1.05589e-05" ixz="7.56655e-05" iyy="0.00124425" iyz="-1.38092e-05" izz="0.00187327"/>
+    </inertial>
+    <!--Added in a simple mesh for collision for entire chassis assembly-->    
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/chassis_collision.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part raspi5 -->
+    <visual>
+      <origin xyz="-0.0455 -2.77556e-17 0.058" rpy="0 -0 1.5708"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/raspi5.stl"/>
+      </geometry>
+      <material name="raspi5_material">
+        <color rgba="0.921569 0.882353 0.643137 1"/>
+      </material>
+    </visual>
+    <!-- Part robotchassis -->
+    <visual>
+      <origin xyz="0 1.26293e-18 0" rpy="0 -0 3.14159"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/robotchassis.stl"/>
+      </geometry>
+      <material name="robotchassis_material">
+        <color rgba="0.34902 0.376471 0.4 1"/>
+      </material>
+    </visual>
+    <!-- Part l298n -->
+    <visual>
+      <origin xyz="0.0296 0.0215 0.05125" rpy="1.5708 -5.77779e-34 3.14159"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/l298n.stl"/>
+      </geometry>
+      <material name="l298n_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_motor -->
+    <visual>
+      <origin xyz="0.00712895 0.0243036 0.0183344" rpy="1.13798e-15 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_motor.stl"/>
+      </geometry>
+      <material name="dcmotor_motor_material">
+        <color rgba="0.803922 0.803922 0.839216 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_belt -->
+    <visual>
+      <origin xyz="0.00843232 0.0243036 0.0183344" rpy="1.26648e-15 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_belt.stl"/>
+      </geometry>
+      <material name="dcmotor_belt_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_body -->
+    <visual>
+      <origin xyz="0.00828145 0.0243036 0.0180594" rpy="1.13798e-15 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_body.stl"/>
+      </geometry>
+      <material name="dcmotor_body_material">
+        <color rgba="1 0.8 0 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_motor_2 -->
+    <visual>
+      <origin xyz="0.00712895 -0.0243036 -0.00833437" rpy="3.14159 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_motor.stl"/>
+      </geometry>
+      <material name="dcmotor_motor_2_material">
+        <color rgba="0.803922 0.803922 0.839216 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_belt_2 -->
+    <visual>
+      <origin xyz="0.00843232 -0.0243036 -0.00833437" rpy="3.14159 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_belt.stl"/>
+      </geometry>
+      <material name="dcmotor_belt_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_body_2 -->
+    <visual>
+      <origin xyz="0.00828145 -0.0243036 -0.00805937" rpy="3.14159 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_body.stl"/>
+      </geometry>
+      <material name="dcmotor_body_2_material">
+        <color rgba="1 0.8 0 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_motor_3 -->
+    <visual>
+      <origin xyz="-0.00712895 0.0243036 -0.00833437" rpy="-0 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_motor.stl"/>
+      </geometry>
+      <material name="dcmotor_motor_3_material">
+        <color rgba="0.803922 0.803922 0.839216 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_belt_3 -->
+    <visual>
+      <origin xyz="-0.00843232 0.0243036 -0.00833437" rpy="1.28498e-16 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_belt.stl"/>
+      </geometry>
+      <material name="dcmotor_belt_3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_body_3 -->
+    <visual>
+      <origin xyz="-0.00828145 0.0243036 -0.00805937" rpy="-1.13798e-15 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_body.stl"/>
+      </geometry>
+      <material name="dcmotor_body_3_material">
+        <color rgba="1 0.8 0 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_motor_4 -->
+    <visual>
+      <origin xyz="-0.00712895 -0.0243036 0.0183344" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_motor.stl"/>
+      </geometry>
+      <material name="dcmotor_motor_4_material">
+        <color rgba="0.803922 0.803922 0.839216 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_belt_4 -->
+    <visual>
+      <origin xyz="-0.00843232 -0.0243036 0.0183344" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_belt.stl"/>
+      </geometry>
+      <material name="dcmotor_belt_4_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <!-- Part dcmotor_body_4 -->
+    <visual>
+      <origin xyz="-0.00828145 -0.0243036 0.0180594" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_body.stl"/>
+      </geometry>
+      <material name="dcmotor_body_4_material">
+        <color rgba="1 0.8 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+
+  <!-- Link assembly_wheeltoaxle 1-->
+  <link name="rear_right_wheel_link">
+    <inertial>
+      <origin xyz="5.69962e-07 1.34222e-07 0.0258027" rpy="0 0 0"/>
+      <mass value="0.0307299"/>
+      <inertia ixx="1.26368e-05" ixy="4.50257e-10" ixz="-1.86533e-10" iyy="1.26367e-05" iyz="-1.62173e-10" izz="1.99729e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0.039" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/wheel_collision.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dcmotor_axle -->
+    <visual>
+      <origin xyz="-0.0130594 -0.0592186 0.0251264" rpy="-1.5708 -5.28658e-33 -1.28245e-17"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_axle.stl"/>
+      </geometry>
+      <material name="dcmotor_axle_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <!-- Part tyre -->
+    <visual>
+      <origin xyz="0.032165 0.0313583 0.0494434" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/tyre.stl"/>
+      </geometry>
+      <material name="tyre_material">
+        <color rgba="0.301961 0.301961 0.301961 1"/>
+      </material>
+    </visual>
+    <!-- Part wheel -->
+    <visual>
+      <origin xyz="0.032165 0.0313583 0.0494334" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/wheel.stl"/>
+      </geometry>
+      <material name="wheel_material">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Joint from assembly_fixedpartstochassis to assembly_wheeltoaxle -->
+  <joint name="RearRightWheel" type="continuous">
+    <origin xyz="-0.0675 -0.04943 0.005" rpy="1.5708 1.46331 -1.37841e-15"/>
+    <parent link="chassis_link"/>
+    <child link="rear_right_wheel_link"/>
+    <axis xyz="0 0 -1"/>  <!--Note right wheels have z-axis the opposite to left wheels because on same axis but flipped round-->
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+
+  <!-- Link front_right_wheel_link -->
+  <link name="front_right_wheel_link">
+    <inertial>
+      <origin xyz="5.69962e-07 1.34222e-07 0.0258027" rpy="0 0 0"/>
+      <mass value="0.0307299"/>
+      <inertia ixx="1.26368e-05" ixy="4.50257e-10" ixz="-1.86533e-10" iyy="1.26367e-05" iyz="-1.62173e-10" izz="1.99729e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0.039" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/wheel_collision.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dcmotor_axle_2 -->
+    <visual>
+      <origin xyz="-0.0130594 -0.0592186 0.0251264" rpy="-1.5708 6.48832e-32 -3.01686e-17"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_axle.stl"/>
+      </geometry>
+      <material name="dcmotor_axle_2_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <!-- Part tyre_2 -->
+    <visual>
+      <origin xyz="0.032165 0.0313583 0.0494434" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/tyre.stl"/>
+      </geometry>
+      <material name="tyre_2_material">
+        <color rgba="0.301961 0.301961 0.301961 1"/>
+      </material>
+    </visual>
+    <!-- Part wheel_2 -->
+    <visual>
+      <origin xyz="0.032165 0.0313583 0.0494334" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/wheel.stl"/>
+      </geometry>
+      <material name="wheel_2_material">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Joint from assembly_fixedpartstochassis to assembly_wheeltoaxle_2 -->
+  <joint name="FrontRightWheel" type="continuous">
+    <origin xyz="0.0675 -0.04943 0.005" rpy="1.5708 0.818287 -1.37186e-15"/>
+    <parent link="chassis_link"/>
+    <child link="front_right_wheel_link"/>
+    <axis xyz="0 0 -1"/> <!--Note right wheels have z-axis the opposite to left wheels because on same axis but flipped round-->
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+
+  <!-- Link front_left_wheel_link -->
+  <link name="front_left_wheel_link">
+    <inertial>
+      <origin xyz="5.69962e-07 1.34222e-07 0.0258027" rpy="0 0 0"/>
+      <mass value="0.0307299"/>
+      <inertia ixx="1.26368e-05" ixy="4.50257e-10" ixz="-1.86533e-10" iyy="1.26367e-05" iyz="-1.62173e-10" izz="1.99729e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0.039" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/wheel_collision.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dcmotor_axle_3 -->
+    <visual>
+      <origin xyz="-0.0130594 -0.0592186 0.0251264" rpy="-1.5708 8.78702e-32 -2.07236e-17"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_axle.stl"/>
+      </geometry>
+      <material name="dcmotor_axle_3_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <!-- Part tyre_3 -->
+    <visual>
+      <origin xyz="0.032165 0.0313583 0.0494434" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/tyre.stl"/>
+      </geometry>
+      <material name="tyre_3_material">
+        <color rgba="0.301961 0.301961 0.301961 1"/>
+      </material>
+    </visual>
+    <!-- Part wheel_3 -->
+    <visual>
+      <origin xyz="0.032165 0.0313583 0.0494334" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/wheel.stl"/>
+      </geometry>
+      <material name="wheel_3_material">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Joint from assembly_fixedpartstochassis to assembly_wheeltoaxle_3 -->
+  <joint name="FrontLeftWheel" type="continuous">
+    <origin xyz="0.0675 0.04943 0.005" rpy="1.5708 0.434588 3.14159"/>
+    <parent link="chassis_link"/>
+    <child link="front_left_wheel_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+
+  <!-- Link rear_left_wheel_link -->
+  <link name="rear_left_wheel_link">
+    <inertial>
+      <origin xyz="5.69962e-07 1.34222e-07 0.0258027" rpy="0 0 0"/>
+      <mass value="0.0307299"/>
+      <inertia ixx="1.26368e-05" ixy="4.50257e-10" ixz="-1.86533e-10" iyy="1.26367e-05" iyz="-1.62173e-10" izz="1.99729e-05"/>
+    </inertial>
+    <collision>
+      <origin xyz="0 0 0.039" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/wheel_collision.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part dcmotor_axle_4 -->
+    <visual>
+      <origin xyz="-0.0130594 -0.0592186 0.0251264" rpy="-1.5708 -1.43421e-33 2.55822e-17"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/dcmotor_axle.stl"/>
+      </geometry>
+      <material name="dcmotor_axle_4_material">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <!-- Part tyre_4 -->
+    <visual>
+      <origin xyz="0.032165 0.0313583 0.0494434" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/tyre.stl"/>
+      </geometry>
+      <material name="tyre_4_material">
+        <color rgba="0.301961 0.301961 0.301961 1"/>
+      </material>
+    </visual>
+    <!-- Part wheel_4 -->
+    <visual>
+      <origin xyz="0.032165 0.0313583 0.0494334" rpy="-3.14159 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://carpet_rover_description/assets/wheel.stl"/>
+      </geometry>
+      <material name="wheel_4_material">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <!-- Joint from assembly_fixedpartstochassis to assembly_wheeltoaxle_4 -->
+  <joint name="RearLeftWheel" type="continuous">
+    <origin xyz="-0.0675 0.04943 0.005" rpy="1.5708 -1.298 3.14159"/>
+    <parent link="chassis_link"/>
+    <child link="rear_left_wheel_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+
+</robot>

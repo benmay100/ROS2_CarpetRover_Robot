@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "37ed7333b50d007c975d9fec",
+    "documentMicroversion": "0f4682c5605e400cc3e76a27",
+    "elementId": "05ce5d527c6235a21357179e",
+    "fullConfiguration": "default",
+    "id": "M9EjNOoOstT0nVxkV",
+    "isStandardContent": false,
+    "name": "DCMotor_Motor <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}

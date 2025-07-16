@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "37ed7333b50d007c975d9fec",
+    "documentMicroversion": "0f4682c5605e400cc3e76a27",
+    "elementId": "cd77a5bd5c7d90dead8a325e",
+    "fullConfiguration": "default",
+    "id": "MoDq9OKxHKS1qt8or",
+    "isStandardContent": false,
+    "name": "RobotChassis <1>",
+    "partId": "JUD",
+    "suppressed": false,
+    "type": "Part"
+}

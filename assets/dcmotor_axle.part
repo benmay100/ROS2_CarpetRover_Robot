@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "37ed7333b50d007c975d9fec",
+    "documentMicroversion": "0f4682c5605e400cc3e76a27",
+    "elementId": "e1b48f59f347eacc39767650",
+    "fullConfiguration": "default",
+    "id": "MXYCURrxJ4xbQH+wm",
+    "isStandardContent": false,
+    "name": "DCMotor_Axle <1>",
+    "partId": "JFL",
+    "suppressed": false,
+    "type": "Part"
+}

@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "37ed7333b50d007c975d9fec",
+    "documentMicroversion": "0f4682c5605e400cc3e76a27",
+    "elementId": "0fe9e664b08bd609d260531b",
+    "fullConfiguration": "default",
+    "id": "M/Y3xRX7mMbD6Eqmm",
+    "isStandardContent": false,
+    "name": "Raspi5 <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}
