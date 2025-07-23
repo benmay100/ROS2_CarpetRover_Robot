@@ -13,8 +13,8 @@
             <wheel_separation>0.15</wheel_separation>
             <wheel_radius>0.068</wheel_radius>
             <!--Best to use prefixes for frame ID's ('robotname/odom' for example) and to set the prefix on the RVIZ config too-->
-            <frame_id>carpet_rover/odom</frame_id>
-            <child_frame_id>carpet_rover/base_footprint</child_frame_id>
+            <frame_id>${robot_name}/odom</frame_id>
+            <child_frame_id>${robot_name}/base_footprint</child_frame_id>
         </plugin>
     </gazebo>
 

@@ -33,14 +33,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/chassis_collision.stl"/>
+        <mesh filename="package://${package_name}/assets/chassis_collision.stl"/>
       </geometry>
     </collision>
     <!-- Part raspi5 -->
     <visual>
       <origin xyz="-0.0455 -2.77556e-17 0.058" rpy="0 -0 1.5708"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/raspi5.stl"/>
+        <mesh filename="package://${package_name}/assets/raspi5.stl"/>
       </geometry>
       <material name="raspi5_material">
         <color rgba="0.921569 0.882353 0.643137 1"/>
@@ -50,7 +50,7 @@
     <visual>
       <origin xyz="0 1.26293e-18 0" rpy="0 -0 3.14159"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/robotchassis.stl"/>
+        <mesh filename="package://${package_name}/assets/robotchassis.stl"/>
       </geometry>
       <material name="robotchassis_material">
         <color rgba="0.34902 0.376471 0.4 1"/>
@@ -60,7 +60,7 @@
     <visual>
       <origin xyz="0.0296 0.0215 0.05125" rpy="1.5708 -5.77779e-34 3.14159"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/l298n.stl"/>
+        <mesh filename="package://${package_name}/assets/l298n.stl"/>
       </geometry>
       <material name="l298n_material">
         <color rgba="0.917647 0.917647 0.917647 1"/>
@@ -70,7 +70,7 @@
     <visual>
       <origin xyz="0.00712895 0.0243036 0.0183344" rpy="1.13798e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_motor.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_motor.stl"/>
       </geometry>
       <material name="dcmotor_motor_material">
         <color rgba="0.803922 0.803922 0.839216 1"/>
@@ -80,7 +80,7 @@
     <visual>
       <origin xyz="0.00843232 0.0243036 0.0183344" rpy="1.26648e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_belt.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_belt.stl"/>
       </geometry>
       <material name="dcmotor_belt_material">
         <color rgba="1 1 1 1"/>
@@ -90,7 +90,7 @@
     <visual>
       <origin xyz="0.00828145 0.0243036 0.0180594" rpy="1.13798e-15 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_body.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_body.stl"/>
       </geometry>
       <material name="dcmotor_body_material">
         <color rgba="1 0.8 0 1"/>
@@ -100,7 +100,7 @@
     <visual>
       <origin xyz="0.00712895 -0.0243036 -0.00833437" rpy="3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_motor.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_motor.stl"/>
       </geometry>
       <material name="dcmotor_motor_2_material">
         <color rgba="0.803922 0.803922 0.839216 1"/>
@@ -110,7 +110,7 @@
     <visual>
       <origin xyz="0.00843232 -0.0243036 -0.00833437" rpy="3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_belt.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_belt.stl"/>
       </geometry>
       <material name="dcmotor_belt_2_material">
         <color rgba="1 1 1 1"/>
@@ -120,7 +120,7 @@
     <visual>
       <origin xyz="0.00828145 -0.0243036 -0.00805937" rpy="3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_body.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_body.stl"/>
       </geometry>
       <material name="dcmotor_body_2_material">
         <color rgba="1 0.8 0 1"/>
@@ -130,7 +130,7 @@
     <visual>
       <origin xyz="-0.00712895 0.0243036 -0.00833437" rpy="-0 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_motor.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_motor.stl"/>
       </geometry>
       <material name="dcmotor_motor_3_material">
         <color rgba="0.803922 0.803922 0.839216 1"/>
@@ -140,7 +140,7 @@
     <visual>
       <origin xyz="-0.00843232 0.0243036 -0.00833437" rpy="1.28498e-16 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_belt.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_belt.stl"/>
       </geometry>
       <material name="dcmotor_belt_3_material">
         <color rgba="1 1 1 1"/>
@@ -150,7 +150,7 @@
     <visual>
       <origin xyz="-0.00828145 0.0243036 -0.00805937" rpy="-1.13798e-15 -1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_body.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_body.stl"/>
       </geometry>
       <material name="dcmotor_body_3_material">
         <color rgba="1 0.8 0 1"/>
@@ -160,7 +160,7 @@
     <visual>
       <origin xyz="-0.00712895 -0.0243036 0.0183344" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_motor.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_motor.stl"/>
       </geometry>
       <material name="dcmotor_motor_4_material">
         <color rgba="0.803922 0.803922 0.839216 1"/>
@@ -170,7 +170,7 @@
     <visual>
       <origin xyz="-0.00843232 -0.0243036 0.0183344" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_belt.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_belt.stl"/>
       </geometry>
       <material name="dcmotor_belt_4_material">
         <color rgba="1 1 1 1"/>
@@ -180,7 +180,7 @@
     <visual>
       <origin xyz="-0.00828145 -0.0243036 0.0180594" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_body.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_body.stl"/>
       </geometry>
       <material name="dcmotor_body_4_material">
         <color rgba="1 0.8 0 1"/>
@@ -199,14 +199,14 @@
     <collision>
       <origin xyz="0 0 0.039" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/wheel_collision.stl"/>
+        <mesh filename="package://${package_name}/assets/wheel_collision.stl"/>
       </geometry>
     </collision>
     <!-- Part dcmotor_axle -->
     <visual>
       <origin xyz="-0.0130594 -0.0592186 0.0251264" rpy="-1.5708 -5.28658e-33 -1.28245e-17"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_axle.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_axle.stl"/>
       </geometry>
       <material name="dcmotor_axle_material">
         <color rgba="1 1 1 1"/>
@@ -216,7 +216,7 @@
     <visual>
       <origin xyz="0.032165 0.0313583 0.0494434" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/tyre.stl"/>
+        <mesh filename="package://${package_name}/assets/tyre.stl"/>
       </geometry>
       <material name="tyre_material">
         <color rgba="0.301961 0.301961 0.301961 1"/>
@@ -226,7 +226,7 @@
     <visual>
       <origin xyz="0.032165 0.0313583 0.0494334" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/wheel.stl"/>
+        <mesh filename="package://${package_name}/assets/wheel.stl"/>
       </geometry>
       <material name="wheel_material">
         <color rgba="1 1 0 1"/>
@@ -253,14 +253,14 @@
     <collision>
       <origin xyz="0 0 0.039" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/wheel_collision.stl"/>
+        <mesh filename="package://${package_name}/assets/wheel_collision.stl"/>
       </geometry>
     </collision>
     <!-- Part dcmotor_axle_2 -->
     <visual>
       <origin xyz="-0.0130594 -0.0592186 0.0251264" rpy="-1.5708 6.48832e-32 -3.01686e-17"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_axle.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_axle.stl"/>
       </geometry>
       <material name="dcmotor_axle_2_material">
         <color rgba="1 1 1 1"/>
@@ -270,7 +270,7 @@
     <visual>
       <origin xyz="0.032165 0.0313583 0.0494434" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/tyre.stl"/>
+        <mesh filename="package://${package_name}/assets/tyre.stl"/>
       </geometry>
       <material name="tyre_2_material">
         <color rgba="0.301961 0.301961 0.301961 1"/>
@@ -280,7 +280,7 @@
     <visual>
       <origin xyz="0.032165 0.0313583 0.0494334" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/wheel.stl"/>
+        <mesh filename="package://${package_name}/assets/wheel.stl"/>
       </geometry>
       <material name="wheel_2_material">
         <color rgba="1 1 0 1"/>
@@ -307,14 +307,14 @@
     <collision>
       <origin xyz="0 0 0.039" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/wheel_collision.stl"/>
+        <mesh filename="package://${package_name}/assets/wheel_collision.stl"/>
       </geometry>
     </collision>
     <!-- Part dcmotor_axle_3 -->
     <visual>
       <origin xyz="-0.0130594 -0.0592186 0.0251264" rpy="-1.5708 8.78702e-32 -2.07236e-17"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_axle.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_axle.stl"/>
       </geometry>
       <material name="dcmotor_axle_3_material">
         <color rgba="1 1 1 1"/>
@@ -324,7 +324,7 @@
     <visual>
       <origin xyz="0.032165 0.0313583 0.0494434" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/tyre.stl"/>
+        <mesh filename="package://${package_name}/assets/tyre.stl"/>
       </geometry>
       <material name="tyre_3_material">
         <color rgba="0.301961 0.301961 0.301961 1"/>
@@ -334,7 +334,7 @@
     <visual>
       <origin xyz="0.032165 0.0313583 0.0494334" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/wheel.stl"/>
+        <mesh filename="package://${package_name}/assets/wheel.stl"/>
       </geometry>
       <material name="wheel_3_material">
         <color rgba="1 1 0 1"/>
@@ -361,14 +361,14 @@
     <collision>
       <origin xyz="0 0 0.039" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/wheel_collision.stl"/>
+        <mesh filename="package://${package_name}/assets/wheel_collision.stl"/>
       </geometry>
     </collision>
     <!-- Part dcmotor_axle_4 -->
     <visual>
       <origin xyz="-0.0130594 -0.0592186 0.0251264" rpy="-1.5708 -1.43421e-33 2.55822e-17"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/dcmotor_axle.stl"/>
+        <mesh filename="package://${package_name}/assets/dcmotor_axle.stl"/>
       </geometry>
       <material name="dcmotor_axle_4_material">
         <color rgba="1 1 1 1"/>
@@ -378,7 +378,7 @@
     <visual>
       <origin xyz="0.032165 0.0313583 0.0494434" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/tyre.stl"/>
+        <mesh filename="package://${package_name}/assets/tyre.stl"/>
       </geometry>
       <material name="tyre_4_material">
         <color rgba="0.301961 0.301961 0.301961 1"/>
@@ -388,7 +388,7 @@
     <visual>
       <origin xyz="0.032165 0.0313583 0.0494334" rpy="-3.14159 1.5708 0"/>
       <geometry>
-        <mesh filename="package://carpet_rover_description/assets/wheel.stl"/>
+        <mesh filename="package://${package_name}/assets/wheel.stl"/>
       </geometry>
       <material name="wheel_4_material">
         <color rgba="1 1 0 1"/>
